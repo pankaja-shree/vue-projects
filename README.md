@@ -1,6 +1,6 @@
 # Projects created from [Udemy Course on Vue JS]()
 
-Examples:
+## Exercises:
 
-1. Creating and using a Vue instance - [instance](instance/index.html) 
-2. Using Directives for reactive and conditional rendering - [directives](directives/index.html)
+* Creating and using a Vue instance - [instance](instance/index.html) 
+* Using Directives for reactive and conditional rendering - [directives](directives/index.html)
