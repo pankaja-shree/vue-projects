@@ -29,3 +29,7 @@ V-models map data to pieces of HTML to allow two-way data binding,
 Computed properties use complex logic to return modified pieces of data.
 
 Lifecycle hooks like created, mounted, and updated allow vue instances to run specific code throughout its lifespan.
+
+## Applications:
+
+# [Notes App](notemaster/index.html)
