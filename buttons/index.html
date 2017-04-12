@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Exercise 4 - Button</title>
+<script src='https://unpkg.com/vue'></script>
+<link rel="stylesheet" href="http://davidtkatz.com/public_css/vue.css">
+</head>
+<body>
+<div id="app">
+<!--Directives - 
+	v-on - for interactivity
+	shorthand for v-on:click is $click -->
+	<button class="vue-btn" v-on:click='reveal'> Reveal the secret number </button>
+</div>
+<script>
+//create Vue instance
+var app = new Vue({
+//html element that we target
+	el: '#app',
+	//data that interacts with the element
+	data: {
+		secretNum: Math.floor(Math.random() * 100) + 1
+	},
+	//methods to operate on the data
+	methods: {
+		reveal() {
+			alert('Here is the secret number: '+this.secretNum)
+		}
+	}
+	})
+</script>
+</body>
+</html>
