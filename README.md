@@ -1,5 +1,10 @@
 # Projects created from [Udemy Course on Vue JS](https://www.udemy.com/vue-web-apps/learn/v4/overview)
 
+## Applications:
+
+### [Notes App](applications/notemaster/index.html)
+### [Single Page application using the Star Wars API](applications/starbase/index.html)
+
 ## Exercises:
 
 * [Creating and using a Vue instance](instance/index.html) 
@@ -8,7 +13,7 @@
 * [Using v-on for interactivity](buttons/index.html)
 * [Creating and working with components and props](components/index.html)
 * [V-model and computed properties](computed/index.html)
-* [Lifecyle hooks](hooks/html)
+* [Lifecyle hooks](hooks/index.html)
 
 ## Notes:
 
@@ -38,7 +43,3 @@ Command - vue init <webpack-template-name> <project-name>
 Example - vue init webpack-simple starbase
 And follow the instructions to install node modules
 
-## Applications:
-
-### [Notes App](applications/notemaster/index.html)
-### [Single Page application using the Star Wars API](applications/starbase/index.html)
