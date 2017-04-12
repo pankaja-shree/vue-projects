@@ -41,3 +41,4 @@ And follow the instructions to install node modules
 ## Applications:
 
 ### [Notes App](applications/notemaster/index.html)
+### [Single Page application using the Star Wars API](applications/starbase/index.html)
