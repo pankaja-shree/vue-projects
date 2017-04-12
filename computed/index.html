@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Exercise 6 - V-model and Computed</title>
+<script src='https://unpkg.com/vue'></script>
+<link rel="stylesheet" href="http://davidtkatz.com/public_css/vue.css">
+</head>
+<body>
+<div id="app">
+<!-- using v-model directive - for getting user inputs 
+computed property - to perform computations - they are used like objects 
+-->
+	<span> Change case </span>
+	<input v-model="text" placeholder="bla" />
+	<div>Lower Case: {{lowerText}}</div>
+</div>
+<script>
+	//Vue instance
+	var app = new Vue({
+	//html element that we target
+		el: '#app',
+		data: {
+			text: ''
+		},
+		//computed property is similar to methods, it defines the functions to compute on the data and return a modified object; it is inserted into html like a data object 
+		computed: {
+			lowerText() {
+				return this.text.toLowerCase();
+			}
+		}
+		})
+</script>
+</body>
+</html>
