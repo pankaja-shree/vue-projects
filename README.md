@@ -8,3 +8,4 @@
 * Using v-on for interactivity - [buttons](buttons/index.html)
 * Creating and working with components and props - [components](components/index.html)
 * V-model and computed properties - [computed](computed/index.html)
+* Lifecyle hooks - [hooks](hooks/html)

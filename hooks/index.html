@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Exercise 7 - Lifecycle hooks</title>
+<script src='https://unpkg.com/vue'></script>
+<link rel="stylesheet" href="http://davidtkatz.com/public_css/vue.css">
+</head>
+<body>
+<div id="app">
+<!-- Lifecycle hooks - 
+1. created component- will execute when the instance is created, before template is rendered.
+Template will not be rendered until created() hook finishes execution
+2. mounted component - after vue instance is mounted on the page
+3. updated hook - runs when any instance gets updated
+-->
+<p>Count: {{count}}</p>
+	<button class='vue-btn' @click='increment'>Increment</button>
+</div>
+<script>
+	//Vue instance
+	var app = new Vue({
+	//html element that we target
+		el: '#app',
+		data: {
+			count: 0
+		},
+		methods: {
+			alertTime() {
+				alert(`The time is ${Date.now().toLocaleString()}`)
+			},
+			increment() {
+				this.count++
+			}
+		},
+		created() {
+			this.alertTime()
+		},
+		mounted() {
+			this.alertTime()
+		},
+		updated() {
+			console.log('this.count',this.count);
+		}
+		})
+</script>
+</body>
+</html>
