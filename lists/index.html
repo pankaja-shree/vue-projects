@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Exercise 3 - loops</title>
+<script src='https://unpkg.com/vue'></script>
+<link rel="stylesheet" href="http://davidtkatz.com/public_css/vue.css">
+</head>
+<body>
+<div id="app">
+<!--Directives - 
+	v-for - looping-->
+	<h3> Looping through simple array using v-for </h3>
+	<ul> 
+		<li v-for = 'color in colors'>{{color}}</li>
+	</ul>
+	<h3> Looping through an array of objects using v-for and v-if </h3>
+	<ul> 
+		<li v-for = 'color in colorsObj' v-if = 'color.primary'>{{color.text}}</li>
+	</ul>
+</div>
+<script>
+//create Vue instance
+var app = new Vue({
+	el: '#app',
+	data: {
+		colors: ['red','green','blue','yellow','orange'],
+		colorsObj: [
+		{
+			text: 'red',
+			primary: true
+ 		},
+		{
+			text: 'green',
+			primary: false
+		},
+		{
+			text: 'blue',
+			primary: true
+ 		},
+		{
+			text: 'yellow',
+			primary: true
+ 		},
+		{
+			text: 'orange',
+			primary: false
+ 		}		
+		]
+		}
+	})
+</script>
+</body>
+</html>
