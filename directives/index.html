@@ -1,21 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>My First Vue App</title>
+<title>Exercise 2</title>
 <script src='https://unpkg.com/vue'></script>
 <link rel="stylesheet" href="http://davidtkatz.com/public_css/vue.css">
 </head>
 <body>
 <div id="app">
-{{text}}</div>
+<!--Directives - 
+	v-bind - for reactive attribute 
+	v-if - for conditional rendering-->
+	<div 
+		v-bind:title='randNum' 
+		v-if="shown">
+		Hover for random number
+	</div>
+</div>
 <script>
 //create Vue instance
 var app = new Vue({
-el: '#app',
-data: {
-text: 'Hello, World'
-}
-})
+	el: '#app',
+	data: {
+		randNum: Math.floor(Math.random() * 50 ) + 1,    //reactive
+		shown: false //for conditional rendering
+		}
+	})
 </script>
 </body>
 </html>
