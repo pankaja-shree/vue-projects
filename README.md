@@ -32,4 +32,4 @@ Lifecycle hooks like created, mounted, and updated allow vue instances to run sp
 
 ## Applications:
 
-# [Notes App](notemaster/index.html)
+### [Notes App](applications/notemaster/index.html)
