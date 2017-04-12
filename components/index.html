@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Exercise 5 - Components</title>
+<script src='https://unpkg.com/vue'></script>
+<link rel="stylesheet" href="http://davidtkatz.com/public_css/vue.css">
+</head>
+<body>
+<div id="app">
+<!--add component and add-num sends the number to the property
+addNum prop is camelCased in the script but in html the words are separated by hyphen since html is case insensitive-->
+	<counter v-bind:add-num='5'></counter>
+	
+</div>
+<script>
+	//create vue component. component takes 2 arguments 
+	//name of the component, options object containing data, templates and methods for that component 
+	//similar to Vue instance, but data should be a function
+	//data() will create a specific this object for local components - and create local states
+	//props send data to component from parents
+	var counter = Vue.component('counter', {
+		template: `
+			<div>
+				<div>Count: {{this.count}}</div>
+				<button class='vue-btn' @click='increment'>Increment by {{addNum}}</button>
+			</div>
+		`,
+		props: {
+			addNum: {
+				type: Number,
+				default: 1
+			}
+		},
+		data() {
+			return{
+				count: 0
+			}
+		},
+		methods: {
+			increment() {
+				this.count += this.addNum
+			}
+		}
+	})
+	//add component property to the Vue instance
+	var app = new Vue({
+	//html element that we target
+		el: '#app',
+		components: {
+			counter
+		}
+		})
+</script>
+</body>
+</html>
