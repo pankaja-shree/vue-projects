@@ -30,6 +30,11 @@
 
 * Lifecycle hooks like created, mounted, and updated allow vue instances to run specific code throughout its lifespan.
 
+### Creating vue project using a webpack template:
+
+Command - vue init <webpack-template-name> <project-name>
+Example - vue init webpack-simple starbase
+
 ## Applications:
 
 ### [Notes App](applications/notemaster/index.html)
