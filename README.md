@@ -32,8 +32,11 @@
 
 ### Creating vue project using a webpack template:
 
+* Webpack - tool to launch a server to host our code and see edits of application in realtime
+
 Command - vue init <webpack-template-name> <project-name>
 Example - vue init webpack-simple starbase
+And follow the instructions to install node modules
 
 ## Applications:
 
