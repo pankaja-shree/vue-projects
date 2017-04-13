@@ -10,3 +10,15 @@ body{
     color: white;
     margin-top: 10%;
 }
+
+.link, .link:hover, .link:active, .link:visited{
+   color: #00ffff;
+}
+
+.item-card{
+    border: 2px solid #90ee90;
+    border-radius: 5px;
+    padding: 1%;
+    margin: 5%;
+    cursor: pointer;
+}
