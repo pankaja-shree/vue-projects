@@ -1,0 +1,24 @@
+body{
+    background: #f5f5dc;
+}
+
+#app{
+    font-family: 'Avenir', 'Helvetica', Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: black;
+    margin-top: 10%;
+}
+
+.link, .link:hover, .link:active, .link:visited{
+   color: #00ffff;
+}
+
+.joke-card{
+    border: 2px solid #00008b;
+    border-radius: 5px;
+    padding: 1%;
+    margin: 5%;
+    cursor: pointer;
+}
