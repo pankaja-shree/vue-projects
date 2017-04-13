@@ -21,3 +21,9 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 
 vue-router - for multipage app
 npm install vue-router --save
+
+### Improvements
+
+* Allow the user to specify their own list of initial_ids rather than hard-coding the [1.13.14] array or list of ids that you chose to go with
+
+* Add another route for vehicles from the api
