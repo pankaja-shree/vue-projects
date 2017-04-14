@@ -20,3 +20,9 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 ### Dependancies
 
 npm install vue-router vuex firebase --save
+
+###Description of the app
+
+* multiple routes based on authentication - sign in component, sign up component and main app - dash board
+* App.vue will hold the routers for switching btw pages
+* main.js handles the switching
