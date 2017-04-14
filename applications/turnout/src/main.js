@@ -26,8 +26,6 @@ const router = new VueRouter({
     ]
 })
 
-
-
 //firbase listens if user has signed in or out on any path of the app - always before Vue instance
 firebaseApp.auth().onAuthStateChanged(user => {
     if (user) {
