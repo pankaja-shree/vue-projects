@@ -3,7 +3,9 @@
 ## Applications:
 
 ### [Notes App](applications/notemaster/index.html)
-### [Single Page application using the Star Wars API](applications/starbase/index.html)
+### [Single Page application using the Star Wars API](deploy/starbase/index.html)
+### [Multi Page application using the Star Wars API and vue-router](deploy/starbase-router/index.html)
+### [Joke App using vuex library](deploy/jokemaster/index.html)
 
 ## Exercises:
 
