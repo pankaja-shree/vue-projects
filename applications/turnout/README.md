@@ -26,3 +26,11 @@ npm install vue-router vuex firebase --save
 * multiple routes based on authentication - sign in component, sign up component and main app - dash board
 * App.vue will hold the routers for switching btw pages
 * main.js handles the switching
+
+### Improvements
+
+Create an attendance “count” on each event card that keeps track of the number of users planning to go to an event.
+
+Create a like/dislike voting system to keep track of popular events.
+
+Integrate an API like the EventBrite api to load a list of real public events.
