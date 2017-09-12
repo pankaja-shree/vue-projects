@@ -2,6 +2,9 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
+var VueMaterial = require('vue-material')
+
+Vue.use(VueMaterial)
 
 Vue.config.productionTip = false
 
