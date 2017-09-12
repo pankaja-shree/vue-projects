@@ -2,9 +2,9 @@
   <div id="app">
   Recipe box
   <form>
-  <input v-model="dish.name"  type = "text" placeholder = "Recipe Name" required>
-  <textarea  v-model="dish.ingredients" rows = "5" cols = "50" placeholder = "Enter ingredients separated by Commas"></textarea><br>
-  <input type = "button" @click = "addrecipe" value = "Add new recipe">
+  <input autofocus v-model="dish.name"  type = "text" placeholder = "Recipe Name" required>
+  <textarea required v-model="dish.ingredients" rows = "5" cols = "50" placeholder = "Enter ingredients separated by Commas"></textarea><br>
+  <input type = "button" @click = "addrecipe" @keyup.enter = "addrecipe" value = "Add new recipe">
   </form>
     <Recipe :recipe-item = "recipes"></Recipe>
   </div>
@@ -34,7 +34,7 @@ export default {
     }
   },
   methods: {
-    addrecipe () {
+    addrecipe: function () {
       return this.recipes.push(this.dish)
     }
   }
