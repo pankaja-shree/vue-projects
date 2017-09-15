@@ -1,7 +1,7 @@
-<<template>
+<template>
   <div id='recipe'>
     <md-toolbar md-theme="white">
-    <span class="md-title">Single Expand</span>
+    <span class="md-title">Recipes</span>
     </md-toolbar>
 
     <md-list>
@@ -44,11 +44,31 @@
         </md-list>
         </md-list-expand>
     </md-list-item>
-
-    <md-list-item>
-        <md-icon>shopping_basket</md-icon>
-        <span>Shop</span>
-    </md-list-item>
     </md-list>
 </div>
 </template>
+
+<script>
+export default {
+  name: 'recipe',
+  data: {
+      return {
+          recipes: [
+              {
+                  title: "Pumpkin Pie", 
+                  ingredients: [
+                      "Pumpkin Puree", 
+                      "Sweetened Condensed Milk", 
+                      "Eggs", 
+                      "Pumpkin Pie Spice", 
+                      "Pie Crust"
+                      ]
+                      }, 
+                {
+                    title: "Spaghetti", 
+                    ingredients: ["Noodles", "Tomato Sauce", "(Optional) Meatballs"]}, 
+  {title: "Onion Pie", ingredients: ["Onion", "Pie Crust", "Sounds Yummy right?"]}
+]
+      }
+  }
+}
