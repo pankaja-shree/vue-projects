@@ -1,17 +1,12 @@
 <template>
   <div id="login">
-    <button @click="logIn()">Login with Google</button>
-    <button>Login with Github</button>
-    <button>Login with Twitter</button>
-    <br>
-        <p>{{error.message}}</p>
-        <br>
-        <router-link to='/signup'>Sign Up </router-link>
+      <div id="firebaseui-auth-container"></div>
   </div>
 </template>
 
 <script>
-import firebase from 'firebase'
+import firebase from 'firebase';
+import firebaseui from 'firebaseui'
 import {firebaseApp} from '../firebaseApp'
 
 export default {
@@ -22,29 +17,19 @@ export default {
         }
       }
    },
-  methods: {
-    logIn() {
-      let provider = new firebase.auth.GoogleAuthProvider();
-      firebase.auth().signInWithRedirect(provider);
-      firebase.auth().getRedirectResult().then(function(result) {
-  if (result.credential) {
-    // This gives you a Google Access Token. You can use it to access the Google API.
-    var token = result.credential.accessToken;
-    // ...
-  }
-  // The signed-in user info.
-  var user = result.user;
-}).catch(function(error) {
-  // Handle Errors here.
-  var errorCode = error.code;
-  var errorMessage = error.message;
-  // The email of the user's account used.
-  var email = error.email;
-  // The firebase.auth.AuthCredential type that was used.
-  var credential = error.credential;
-  // ...
-});
-      }
+  mounted() {
+    var uiConfig = {
+      signInSuccessUrl: '/dashboard',
+      signInOptions: [
+        firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+        //firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+        //firebase.auth.TwitterAuthProvider.PROVIDER_ID,
+        firebase.auth.GithubAuthProvider.PROVIDER_ID,
+        firebase.auth.EmailAuthProvider.PROVIDER_ID,
+        ]
+      };
+    var ui = new firebaseui.auth.AuthUI(firebase.auth());
+    ui.start('#firebaseui-auth-container', uiConfig);
    }
 }
 </script>
