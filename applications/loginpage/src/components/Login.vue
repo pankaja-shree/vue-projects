@@ -1,14 +1,32 @@
 <template>
   <div id="login">
-    <v-btn large left>Login with Google</v-btn>
-    <v-btn large left>Login with Github</v-btn>
-    <v-btn large left>Login with Twitter</v-btn>
+    <button>Login with Google</button>
+    <button large left>Login with Github</button>
+    <button large left>Login with Twitter</button>
+    <br>
+        <p>{{error.message}}</p>
+        <br>
+        <router-link to='/signup'>Sign Up </router-link>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'login'
+  data() {
+    return {
+      error: {
+          message: ''
+        }
+      }
+   },
+  methods: {
+    signIn() {
+        firebaseApp.auth().GoogleAuthProvider()
+        .catch(error => {
+            this.error = error
+        })
+      }
+   }
 }
 </script>
 
