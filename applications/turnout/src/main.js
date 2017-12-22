@@ -1,7 +1,7 @@
 //import store from store directory and pass the store in the Vue instance
 import store from './store'
 import Vue from 'vue'
-import App from './components/App.vue'
+import App from './App.vue'
 import VueRouter from 'vue-router' 
 import {firebaseApp} from './firebaseApp'
 
