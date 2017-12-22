@@ -2,8 +2,7 @@
   <div class="hello">
     <HeaderBar></HeaderBar>
     <h1>{{ msg }}</h1>
-    <router-link to="/login" v-if="$store.user">Login</router-link>
-    <router-link to="/dashboard">Dashboard</router-link>
+    <router-link to="/login">Login</router-link>
     <button @click = "signOut()">Signout</button>
   </div>
 </template>
