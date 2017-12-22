@@ -41,8 +41,8 @@ const router = new Router({
 firebaseApp.auth().onAuthStateChanged(user => {
   if (user) {
       store.dispatch('signIn',user) // call the action signIn with the user parameter
-      router.push('/') //routerpush method will navigate to this page and place this page on top (last of the stack)
-  }
+      router.push('/dashboard') //routerpush method will navigate to this page and place this page on top (last of the stack)
+    }
   else {
       router.replace('/login') //replace will place this page on the beginning of the stack
   }
