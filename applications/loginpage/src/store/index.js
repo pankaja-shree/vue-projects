@@ -7,7 +7,7 @@ Vue.use(Vuex)
 
 const state = {
     user: {},
-    //events: []
+    stories: []
 }
 
 export default new Vuex.Store({

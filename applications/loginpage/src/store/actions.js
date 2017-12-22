@@ -13,6 +13,6 @@ export const signOut = ({commit}) => {
     commit(types.SIGN_OUT) // this will call the types.SIGN_IN function 
 }
 
-//export const setEvents = ({commit}, events_payload) => {
-//    commit(types.SET_EVENTS, events_payload)
-//} 
+export const setEvents = ({commit}, stories_payload) => {
+    commit(types.SET_EVENTS, stories_payload)
+} 
