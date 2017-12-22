@@ -2,6 +2,9 @@
   <div class="hello">
     <HeaderBar></HeaderBar>
     <h1>{{ msg }}</h1>
+    <router-link to="/login" v-if="$store.user">Login</router-link>
+    <router-link to="/dashboard">Dashboard</router-link>
+    <router-link to="/login">Signout</router-link>
   </div>
 </template>
 
@@ -16,7 +19,13 @@ export default {
     return {
       msg: 'Code Stories landing page'
     }
-  }
+  },
+   methods: {
+        signOut() {
+            this.$store.dispatch('signOut')
+            firebaseApp.auth().signOut()
+        }
+    }
 }
 </script>
 
