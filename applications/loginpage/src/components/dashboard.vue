@@ -1,12 +1,20 @@
 <template>
   <div id="dashboard">
-    <h1>Hello user!</h1>
+    <h1>Hello {{$store.state.user.displayName}} </h1>
+      <p>{{$store.state}}!</p>
+    <button @click="signOut()">Signout</button>
   </div>
 </template>
 
 <script>
+import {firebaseApp} from '../firebaseApp'
 export default {
-  name: 'dashboard'
+  methods: {
+        signOut() {
+            this.$store.dispatch('signOut')
+            firebaseApp.auth().signOut()
+        }
+    }
 }
 </script>
 
