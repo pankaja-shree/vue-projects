@@ -14,5 +14,5 @@ import firebase from 'firebase'
 export const firebaseApp = firebase.initializeApp(config)
 
 //firebase instance for accessing database - domain is ref
-//events child create events database and listens for changes in the database and updates it
-export const eventsRef = firebase.database().ref().child('events')
+//stories child create stories database and listens for changes in the database and updates it
+export const storiesRef = firebase.database().ref().child('stories')
