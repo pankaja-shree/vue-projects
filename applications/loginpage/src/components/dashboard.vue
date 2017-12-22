@@ -2,13 +2,18 @@
   <div id="dashboard">
     <h1>Hello {{$store.state.user.displayName}} </h1>
     <button @click="signOut()">Signout</button>
-    <pre>{{$store.state.user}}</pre>
-  <router-link to="/">Home</router-link>
+    <router-link to="/">Home</router-link>
+    <ul>
+      <li>Email: {{$store.state.user.email}}</li>
+      <li>Avatar: <img :src="$store.state.user.photoURL" width="20%"/></li>
+    </ul>
+    <add-story />
   </div>
 </template>
 
 <script>
 import {firebaseApp} from '../firebaseApp'
+import AddStory from './AddStory'
 
 export default {
   methods: {
@@ -16,7 +21,10 @@ export default {
             this.$store.dispatch('signOut')
             firebaseApp.auth().signOut()
         }
-    }
+    },
+  components: {
+    'add-story': AddStory
+  }
 }
 </script>
 
