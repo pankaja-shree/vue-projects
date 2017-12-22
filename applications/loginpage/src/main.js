@@ -5,6 +5,7 @@ import store from './store'
 
 import Router from 'vue-router'
 import Home from './components/Home'
+import Dashboard from './components/dashboard'
 import Login from './components/Login'
 import Signup from './components/Signup'
 //import router from './router'
@@ -21,13 +22,18 @@ const router = new Router({
       component: Home
     },
     {
+      path: '/dashboard',
+      component: Dashboard
+    },
+    {
       path: '/login',
       component: Login
     },
     {
       path: '/signup',
       component: Signup
-    }
+    },
+
   ]
 })
 
