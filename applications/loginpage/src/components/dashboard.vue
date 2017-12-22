@@ -8,7 +8,8 @@
 </template>
 
 <script>
-import firebase from 'firebase'
+import {firebaseApp} from '../firebaseApp'
+
 export default {
   methods: {
         signOut() {
