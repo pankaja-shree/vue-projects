@@ -2,12 +2,11 @@
   <div id="dashboard">
     <h1>Hello {{$store.state.user.displayName}} </h1>
     <button @click="signOut()">Signout</button>
-    <router-link to="/">Home</router-link>
+    <router-link to="/addstory">Create a story</router-link>
     <ul>
       <li>Email: {{$store.state.user.email}}</li>
       <li>Avatar: <img :src="$store.state.user.photoURL" width="20%"/></li>
     </ul>
-    <add-story />
   </div>
 </template>
 
