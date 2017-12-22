@@ -4,7 +4,7 @@ import App from './App.vue'
 import store from './store'
 
 import Router from 'vue-router'
-import Home from './components/Home'
+import AddStory from './components/AddStory'
 import Dashboard from './components/dashboard'
 import Login from './components/Login'
 import Signup from './components/Signup'
@@ -17,9 +17,9 @@ const router = new Router({
   mode:'history', //vuerouter has hashmode and history mode , hashmode switches routes with refreshes.
   routes: [
     {
-      path: '/',
-      name: 'Home',
-      component: Home
+      path: '/addstory',
+      name: 'AddStory',
+      component: AddStory
     },
     {
       path: '/dashboard',
