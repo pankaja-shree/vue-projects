@@ -1,13 +1,13 @@
 import firebase from 'firebase'
 
   // Initialize Firebase
-  const config = {
-    apiKey: "AIzaSyAD4s_pXhYkHSZpa2pKzswx2GNyewKCyjY",
-    authDomain: "turnout-e10c7.firebaseapp.com",
-    databaseURL: "https://turnout-e10c7.firebaseio.com",
-    projectId: "turnout-e10c7",
-    storageBucket: "",
-    messagingSenderId: "974351173998"
+  var config = {
+    apiKey: "AIzaSyA0LjSCYHsyfkRR5KdAe_EFG5Nx2c5yJjw",
+    authDomain: "codestories-77d89.firebaseapp.com",
+    databaseURL: "https://codestories-77d89.firebaseio.com",
+    projectId: "codestories-77d89",
+    storageBucket: "codestories-77d89.appspot.com",
+    messagingSenderId: "448867661968"
   };
 
 //create and export firebase instance 
