@@ -28,8 +28,8 @@ export default {
         firebase.auth.EmailAuthProvider.PROVIDER_ID,
         ]
       };
-    ui.disableAutoSignIn();
     let ui = new firebaseui.auth.AuthUI(firebase.auth());
+    ui.disableAutoSignIn();
     ui.start('#firebaseui-auth-container', uiConfig);
    }
 }
